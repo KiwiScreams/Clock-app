@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Frontend Mentor | Clock App</title>
+</head>
+
+<body>
+  <div class="main-container">
+    <div class="ada-text" id="ada-text">
+      <p>“The science of operations, as derived from mathematics more especially, is a science of itself, and has its
+        own
+        abstract truth and value.”</p>
+      <h6>Ada Lovelace</h6>
+    </div>
+    <div class="data-container">
+      <div class="data-header flex">
+        <img src="./assets/desktop/icon-sun.svg" alt="sun" id="time-img">
+        <h4 id="CURRENTLY">GOOD MORNING, IT'S CURRENTLY</h4>
+      </div>
+      <div class="data-content">
+        <h1 id="time">11:37</h1><span>BST</span>
+        <div class="button-container flex">
+          <h4>IN LONDON, UK</h4>
+          <button id="more-btn">MORE<img src="./assets/desktop/icon-arrow-down.svg" alt="icon-arrow-down"></button>
+        </div>
+      </div>
+    </div>
+    <div class="more-container flex" id="more-container">
+      <div class="left">
+        <h4 class="text">CURRENT TIMEZONE</h4>
+        <h2 class="text">Europe/London</h2>
+        <h4 class="text">DAY OF THE YEAR</h4>
+        <h2 id="yearday" class="text">295</h2>
+      </div>
+      <hr>
+      <div class="right">
+        <h4 class="text">DAY OF WEEK</h4>
+        <h2 id="day" class="text">5</h2>
+        <h4 class="text">WEEK NUMBER</h4>
+        <h2 id="week" class="text">42</h2>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,214 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    font-family: 'inter';
+}
+@font-face {
+    font-family: 'inter';
+    src: url(../assets/fonts/Inter/Inter-VariableFont_slnt\,wght.ttf);
+}
+:root
+{
+    /* COLOR */
+    --white-clr: #fff;
+    --grey-clr: #303030;
+    --black-clr: #000000;
+    /* FONTSIZE */
+    --fontSize-16px: 16px;
+    --fontSize-18px: 18px;
+    --fontSize-20px: 20px;
+    --fontSize-24px: 24px;
+    --fontSize-40px: 40px;
+    --fontSize-56px: 56px;
+    --fontSize-200px: 200px;
+    /* FONTWEIGHT */
+    --fontWeight-300: 300;
+    --fontWeight-400: 400;
+    --fontWeight-700: 700;
+}
+.flex
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+body
+{
+    /* background: url(../assets/desktop/bg-image-daytime.jpg); */
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    overflow: hidden;
+    backdrop-filter: brightness(70%);
+    padding-top: 30px;
+}
+.main-container
+{
+    width: 100%;
+    height: 100vh;
+}
+.ada-text
+{
+    width: 576px;
+    margin-bottom: 180px;
+    margin-left: 166px; 
+}
+.ada-text p
+{
+    color: var(--white-clr);
+    font-size: var(--fontSize-18px);
+    line-height: 28px;
+    font-weight: var(--fontWeight-400);
+    margin-bottom: 14px;
+}
+.ada-text h6
+{
+    color: var(--white-clr);
+    font-size: var(--fontSize-18px);
+    font-weight: var(--fontWeight-700);
+    line-height: 28px;
+}
+.data-container
+{
+    width: 1110px;
+    margin-left: 166px; 
+    margin-bottom: 46px;
+}
+.data-container .data-header
+{
+    margin-bottom: 10px;
+    width: 484px;
+}
+.data-container .data-header h4
+{
+    font-weight: var(--fontWeight-400);
+    color: var(--white-clr);
+    font-size: var(--fontSize-20px);
+    letter-spacing: 4px;
+}
+.data-container .data-content h1
+{
+    font-size: var(--fontSize-200px);
+    color: var(--white-clr);
+    font-weight: var(--fontWeight-700);
+    letter-spacing: -5px;
+    display: inline-block;
+}
+.data-container .data-content span
+{
+    font-weight: var(--fontWeight-300);
+    font-size: var(--fontSize-40px);
+    margin-top: 20px;
+    letter-spacing: 1px;
+    color: var(--white-clr);
+}
+.data-container .data-content h4
+{
+    color: var(--white-clr);
+    font-weight: var(--fontWeight-700);
+    font-size: var(--fontSize-24px);
+    letter-spacing: 4.8px;
+}
+.data-container .button-container button
+{
+    background-color: var(--white-clr);
+    font-size: var(--fontSize-16px);
+    color: var(--grey-clr);
+    font-weight: var(--fontWeight-700);
+    letter-spacing: 5px;
+    padding: 8px 10px 8px 22px;
+    border-radius: 50px;
+    align-items: center;
+    display: flex;
+}
+.data-container .button-container button img
+{
+    background-color: var(--grey-clr);
+    border-radius: 50%;
+    padding: 17px 14px;
+    margin-left: 12px;
+    transition: 0.3s;
+}
+.data-container .button-container button img:hover,
+.data-container .button-container button img:active
+{
+    opacity: 0.8;
+    transition: 0.3s;
+}
+.more-container
+{
+    width: 100%;
+    height: 50vh;
+    display: none;
+    background: radial-gradient(#ffffff78, white);
+    backdrop-filter: blur(30px);
+    padding: 74px 400px 74px 160px; 
+}
+.more-container h4
+{
+    color: var(--grey-clr);
+    font-weight: var(--fontWeight-400);
+    letter-spacing: 3px;
+    font-size: var(--fontSize-16px);
+    margin-bottom: 10px;
+}
+.more-container h2
+{
+    color: var(--grey-clr);
+    font-size: var(--fontSize-56px);
+    margin-bottom: 42px;
+}
+.light
+{
+    animation: panel-up 1s ease-in-out;
+}
+@keyframes panel-up
+{
+    0%
+    {
+        display: none;
+        background-color: black;
+    }
+    100%
+    {
+        display: block;
+        display: flex;
+        background: radial-gradient(#ffffff78, white);
+    }
+}
+@keyframes panel-down
+{
+    0%
+    {
+        display: none;
+        background-color: white;
+    }
+    100%
+    {
+        display: block;
+        display: flex;
+        background: radial-gradient(#000000cc, black);
+    }
+}
+.dark
+{
+    animation: 1s ease-in-out panel-down;
+}
+.black-panel
+{
+    background: radial-gradient(#000000cc, black);
+}
+hr
+{
+    width: 1px;
+    height: 100%;
+    display: inline-block; background-color: var(--white-clr);
+    opacity: 0.4;
+}
