@@ -31,8 +31,8 @@ function updateTime()
     let oneDay = 1000 * 60 * 60 * 24;
     let dayOfYear = Math.floor(diff / oneDay);
     year_day.textContent = dayOfYear;
-    const londonDate = new Date(currentDate.toLocaleString('en-GB', { timeZone: 'Europe/London' }));//for testing light
-    // const londonDate = new Date(currentDate.toLocaleString('en-GB', { timeZone: 'Asia/Tokyo' })); //for testing dark
+    const londonDate = new Date(currentDate.toLocaleString('en-GB', { timeZone: 'Asia/Tbilisi' }));
+    // const londonDate = new Date(currentDate.toLocaleString('en-GB', { timeZone: 'Asia/Tokyo' }));
     const hours = londonDate.getHours();
     const minutes = londonDate.getMinutes();
     time.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
@@ -64,8 +64,7 @@ function updateTime()
         time_img.src = './assets/desktop/icon-moon.svg';
     }
 }
-updateTime();
-setInterval(updateTime, 60000);
+
 function getWeekOfYear(date)
 {
     let start = new Date(date.getFullYear(), 0, 1);
@@ -73,3 +72,5 @@ function getWeekOfYear(date)
 }
 const weekOfYear = getWeekOfYear(currentDate);
 week.innerHTML = weekOfYear;
+setInterval(updateTime, 60000);
+updateTime();
