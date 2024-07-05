@@ -16,16 +16,18 @@ more_btn.addEventListener('click', function () {
         ada_text.style.display = 'block';
         isHidden = false;
     }
-    else {
+    else
+    {
         ada_text.style.display = 'none';
         more_btn.innerHTML = 'LESS <img src="./assets/desktop/icon-arrow-up.svg" alt="icon-arrow-up">';
         more_container.style.display = 'flex';
         isHidden = true;
     }
 });    
-const currentDate = new Date();
+
 function updateTime()
 {
+    const currentDate = new Date();
     let startTime = new Date(currentDate.getFullYear(), 0, 0);
     let diff = (currentDate - startTime) + ((currentDate.getTimezoneOffset() - currentDate.getTimezoneOffset()) * 60 * 1000);
     let oneDay = 1000 * 60 * 60 * 24;
@@ -42,7 +44,7 @@ function updateTime()
     day.textContent = today;
     if(hours >= 6 && hours < 18)
     {
-        document.body.style.backgroundImage = 'url(../assets/desktop/bg-image-daytime.jpg)';console.log("is light");
+        document.body.style.backgroundImage = 'url(../assets/desktop/bg-image-daytime.jpg)';
         textElements.forEach(text => 
         {
             text.style.color = '#303030';
@@ -53,7 +55,6 @@ function updateTime()
     else
     {
         document.body.style.backgroundImage = 'url(../assets/desktop/bg-image-nighttime.jpg)';
-        console.log("is dark");
         textElements.forEach(text => 
         {
             text.style.color = '#fff';
@@ -70,7 +71,10 @@ function getWeekOfYear(date)
     let start = new Date(date.getFullYear(), 0, 1);
     return Math.ceil((((date - start) / 86400000) + start.getDay() + 1) / 7);
 }
+const currentDate = new Date();
 const weekOfYear = getWeekOfYear(currentDate);
 week.innerHTML = weekOfYear;
-setInterval(updateTime, 60000);
+setInterval(() => {
+    updateTime();
+}, 1000);
 updateTime();
