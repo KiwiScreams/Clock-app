@@ -277,6 +277,10 @@ hr {
 
 @media screen and (max-width: 476px) {
 
+    .data-container .button-container button 
+    {
+        margin-top: 40px;
+    }
     body,
     html {
         width: 100%;
@@ -337,8 +341,8 @@ hr {
         display: flex;
         align-content: center;
         flex-wrap: wrap;
-        padding: 0;
-        height: 20vh;
+        padding: 10px 30px;
+        height: 50vh;
     }
     .more-container h2 {
         margin-bottom: 0;
