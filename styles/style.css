@@ -337,6 +337,8 @@ hr {
         display: flex;
         align-content: center;
         flex-wrap: wrap;
+        padding: 0;
+        height: 20vh;
     }
     .more-container h2 {
         margin-bottom: 0;
