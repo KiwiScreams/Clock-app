@@ -34,7 +34,6 @@ function updateTime()
     let dayOfYear = Math.floor(diff / oneDay);
     year_day.textContent = dayOfYear;
     const londonDate = new Date(currentDate.toLocaleString('en-GB', { timeZone: 'Asia/Tbilisi' }));
-    // const londonDate = new Date(currentDate.toLocaleString('en-GB', { timeZone: 'Asia/Tokyo' }));
     const hours = londonDate.getHours();
     const minutes = londonDate.getMinutes();
     time.textContent = `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
